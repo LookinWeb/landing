@@ -1,0 +1,22 @@
+[
+  {
+    "name": "GoBlitz Documentation Page",
+    "url": "https://docs.goblitz.org/",
+    "picture": "./img/projects/goBlitz_documentation_page.webp"
+  },
+  {
+    "name": "DevOps Engineer Portfolio Website",
+    "url": "https://kostlinux.github.io/Portfolio",
+    "picture": "./img/projects/christofher_kost.webp"
+  },
+  {
+    "name": "LookinLabs Website",
+    "url": "https://github.com/LookinLabs/LookinLabs-Web",
+    "picture": "./img/projects/design.webp"
+  },
+  {
+    "name": "Software Engineer Portfolio Website",
+    "url": "https://martinsidorov.com/",
+    "picture": "./img/projects/martin_sidorov.webp"
+  }
+]
