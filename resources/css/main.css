@@ -1,3 +1,8 @@
+/* Apply color to all text */
+body {
+  color: #0a0c34;
+}
+
 /* Pedro */
 #refreshLoader.hide-loader {
   display: none;
@@ -42,13 +47,23 @@
   margin: 0;
   background: linear-gradient(
     335.98deg,
-    rgba(178, 138, 209, 0.87) 14.5%,
-    #7dc2b2 53.5%,
-    #f9f2b4 96.5%
+    rgba(198, 204, 236, 0.87) 8.5%,
+    #a7cdc4 53.5%,
+    #d8eee0 96.5%
   );
-  background-blend-mode: darken;
+  background-blend-mode: screen;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+.lookinweb-navbar {
+  background: linear-gradient(0deg, #a6dddd 26%, #769494 100%);
+  background-blend-mode: darken;
+}
+
+.lookinweb-footer {
+  background: linear-gradient(0deg, #a6dddd, #a6dddd);
+  background-blend-mode: darken;
 }
 
 .button-gradient {

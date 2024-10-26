@@ -54,7 +54,7 @@
     <div id="content">
       <header class="relative mx-auto mb-8">
         <div class="container">
-          <nav class="fixed top-0 w-full z-50 bg-gray-900 border-gray-200">
+          <nav class="fixed top-0 w-full z-50 lookinweb-navbar">
             <div
               class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto"
             >
@@ -68,13 +68,13 @@
                   alt="LookinWeb"
                 />
                 <span
-                  class="self-center text-2xl font-semibold whitespace-nowrap text-white"
+                  class="self-center text-2xl font-semibold whitespace-nowrap"
                 ></span>
               </a>
               <button
                 id="navbar-toggler"
                 type="button"
-                class="mr-8 inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden text-white hover:bg-gray-100 focus:outline-none focus:ring-2 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                class="mr-8 inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                 aria-controls="navbar-default"
                 aria-expanded="false"
               >
@@ -97,40 +97,33 @@
               </button>
               <div class="hidden w-full md:flex md:w-auto" id="navbar-default">
                 <ul
-                  class="font-medium flex flex-col md:p-0 md:flex-row md:space-x-8 rtl:space-x-reverse bg-gray-900"
+                  class="font-medium flex flex-col md:p-0 md:flex-row md:space-x-8 rtl:space-x-reverse"
                 >
                   <li>
                     <a
                       href="#about"
-                      class="block py-2 px-3 md:hover:bg-transparent md:border-0 md:hover:text-purple-400 md:p-0 text-white md:dark:hover:text-purple-400 hover:bg-gray-700 hover:text-white md:dark:hover:bg-transparent"
+                      class="block py-2 px-3 md:hover:bg-transparent md:border-0 md:hover:text-purple-400 md:p-0 md:dark:hover:text-purple-400 hover:bg-gray-700 hover:text-white md:dark:hover:bg-transparent"
                       >About</a
                     >
                   </li>
                   <li>
                     <a
-                      href="#who-we-are"
-                      class="block py-2 px-3 md:hover:bg-transparent md:border-0 md:hover:text-purple-400 md:p-0 text-white md:dark:hover:text-purple-400 hover:bg-gray-700 hover:text-white md:dark:hover:bg-transparent"
-                      >Who we are?</a
-                    >
-                  </li>
-                  <li>
-                    <a
                       href="#benefits"
-                      class="block py-2 px-3 md:hover:bg-transparent md:border-0 md:hover:text-purple-400 md:p-0 text-white md:dark:hover:text-purple-400 hover:bg-gray-700 hover:text-white md:dark:hover:bg-transparent"
+                      class="block py-2 px-3 md:hover:bg-transparent md:border-0 md:hover:text-purple-400 md:p-0 md:dark:hover:text-purple-400 hover:bg-gray-700 hover:text-white md:dark:hover:bg-transparent"
                       >Benefits</a
                     >
                   </li>
                   <li>
                     <a
                       href="#our-works"
-                      class="block py-2 px-3 md:hover:bg-transparent md:border-0 md:hover:text-purple-400 md:p-0 text-white md:dark:hover:text-purple-400 hover:bg-gray-700 hover:text-white md:dark:hover:bg-transparent"
+                      class="block py-2 px-3 md:hover:bg-transparent md:border-0 md:hover:text-purple-400 md:p-0 md:dark:hover:text-purple-400 hover:bg-gray-700 hover:text-white md:dark:hover:bg-transparent"
                       >Our works</a
                     >
                   </li>
                   <li>
                     <a
                       href="#customers-reviews"
-                      class="block py-2 px-3 md:hover:bg-transparent md:border-0 md:hover:text-purple-400 md:p-0 text-white md:dark:hover:text-purple-400 hover:bg-gray-700 hover:text-white md:dark:hover:bg-transparent"
+                      class="block py-2 px-3 md:hover:bg-transparent md:border-0 md:hover:text-purple-400 md:p-0 md:dark:hover:text-purple-400 hover:bg-gray-700 hover:text-white md:dark:hover:bg-transparent"
                       >Customers reviews</a
                     >
                   </li>
@@ -139,15 +132,15 @@
               <div id="language-changer" class="p-5">
                 <div class="relative inline-flex items-center">
                   <button id="language-button" class="flex items-center">
-                    <i class="fas fa-globe text-white mr-2"></i>
-                    <span id="selected-language" class="text-sm text-white">
+                    <i class="fas fa-globe mr-2"></i>
+                    <span id="selected-language" class="text-sm">
                       EN <span class="flag-icon flag-icon-gb mr-2"></span>
                     </span>
-                    <i class="fas fa-caret-down text-white ml-2"></i>
+                    <i class="fas fa-caret-down ml-2"></i>
                   </button>
                   <div
                     id="language-options"
-                    class="hidden absolute bg-gray-900 text-white rounded mt-2 w-32 right-0 top-full"
+                    class="hidden absolute bg-gray-900 rounded mt-2 w-32 right-0 top-full"
                   >
                     <button
                       class="p-2 flex items-center w-full text-left hover:bg-purple-400 hover:text-white"
@@ -174,7 +167,7 @@
           </nav>
         </div>
       </header>
-      <main class="container mx-auto px-8 md:px-16 lg:px-32 text-white fade-in">
+      <main class="container mx-auto px-8 md:px-16 lg:px-32 fade-in">
         <section id="about" class="flex flex-col sm:flex-row pt-24">
           <div class="w-full sm:w-1/2 mr-16">
             <h1 class="text-2xl font-bold mb-10 underline">About</h1>
@@ -197,29 +190,6 @@
               alt="Startup"
               style="box-shadow: 0px 0px 8px 0px #b5d200bf"
             />
-          </div>
-        </section>
-
-        <section id="who-we-are" class="flex flex-wrap pt-16">
-          <h1 class="text-2xl font-bold my-6 underline w-full">Who We Are</h1>
-          <p class="w-full text-justify leading-6 mb-8">
-            At LookinWeb, we are a team of dedicated professionals who are
-            passionate about technology and innovation. We are committed to
-            delivering high-quality solutions that meet the needs of our
-            clients. Our team is made up of experienced developers, designers,
-            and project managers who work together to create innovative
-            solutions that drive business growth and success. We believe in the
-            power of technology to transform businesses and improve people's
-            lives. That's why we are dedicated to staying up-to-date with the
-            latest trends and technologies in the industry. We are constantly
-            learning and growing so that we can provide our clients with the
-            best possible solutions.
-          </p>
-          <div
-            id="team-members"
-            class="w-full flex flex-wrap justify-center mt-8"
-          >
-            <!-- Team members will be inserted here -->
           </div>
         </section>
 
@@ -395,12 +365,12 @@
               </div>
               <!-- Navigation Buttons -->
               <button
-                class="carousel-prev absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
+                class="carousel-prev absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 p-2 rounded-full"
               >
                 &#10094;
               </button>
               <button
-                class="carousel-next absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
+                class="carousel-next absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 p-2 rounded-full"
               >
                 &#10095;
               </button>
@@ -445,7 +415,7 @@
             >
               <div>
                 <p class="montserrat text-base mt-4">+372 5686 5405</p>
-                <p class="montserrat text-base mt-4">support@lookinweb.com</p>
+                <p class="montserrat text-base mt-4">support@lookinweb.org</p>
                 <p class="montserrat text-base mt-4">Tallinn, Estonia</p>
                 <p class="montserrat text-base mt-4">
                   IBAN: EE111111111111111111
@@ -454,7 +424,7 @@
                 <p class="montserrat text-base mt-4">KMKR: EE111111111</p>
                 <button
                   id="schedule-button"
-                  class="px-4 py-2 bg-black hover:bg-gray-700 text-white rounded mt-4"
+                  class="px-4 py-2 bg-black hover:bg-gray-700 rounded mt-4"
                 >
                   Contact us
                 </button>
@@ -480,21 +450,12 @@
       <div
         class="sm:w-auto md:w-auto lg:w-auto xl:w-auto flex justify-center mt-4"
       >
-        <footer
-          class="w-full mt-20 p-2 bg-gray-900 border-gray-200 text-center text-white"
-        >
+        <footer class="w-full mt-20 p-2 lookinweb-footer text-center">
           <div class="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
             <div class="py-2 h-12 text-3xl font-bold">LookinWeb</div>
-            <div class="">Feel free to contact us directly.</div>
-            <div class="text-sm">support@lookinweb.com</div>
-            <div class="h-10 flex justify-center space-x-4 text-sm">
-              + 372 5686 5405
-            </div>
             <div class="h-12 flex justify-center space-x-4">
               <a href="https://github.com/LookinWeb" target="_blank">
-                <i
-                  class="fab fa-github fa-2x text-white hover:text-gray-400"
-                ></i>
+                <i class="fab fa-github fa-2x hover:text-gray-400"></i>
               </a>
               <a
                 href="https://www.linkedin.com/company/lookinweb"
