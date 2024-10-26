@@ -110,7 +110,8 @@ document.addEventListener("DOMContentLoaded", function () {
   loadTranslations("en"); // Default language
 
   // Carousel
-  let scrollTimer;
+  let worksScrollTimer;
+  let reviewsScrollTimer;
   const leftWorksCarouselButton = document.getElementById("left-works-button");
   const rightWorksCarouselButton =
     document.getElementById("right-works-button");
@@ -137,29 +138,41 @@ document.addEventListener("DOMContentLoaded", function () {
     scrollCarouselRight(reviewsCarousel)
   );
 
-  worksCarousel.addEventListener("mouseover", stopCarouselScroll);
-  reviewsCarousel.addEventListener("mouseover", stopCarouselScroll);
+  worksCarousel.addEventListener("mouseover", () =>
+    stopCarouselScroll(worksScrollTimer)
+  );
+  reviewsCarousel.addEventListener("mouseover", () =>
+    stopCarouselScroll(reviewsScrollTimer)
+  );
   worksCarousel.addEventListener("mouseout", () =>
-    startCarouselScroll(worksCarousel)
+    startCarouselScroll(worksCarousel, "works")
   );
   reviewsCarousel.addEventListener("mouseout", () =>
-    startCarouselScroll(reviewsCarousel)
+    startCarouselScroll(reviewsCarousel, "reviews")
   );
 
   [leftWorksCarouselButton, rightWorksCarouselButton].forEach((button) => {
-    button.addEventListener("mouseover", stopCarouselScroll);
-    button.addEventListener("mouseout", () =>
-      startCarouselScroll(worksCarousel)
+    button.addEventListener("mouseover", () =>
+      stopCarouselScroll(worksScrollTimer)
     );
-    button.addEventListener("click", stopCarouselScroll);
+    button.addEventListener("mouseout", () =>
+      startCarouselScroll(worksCarousel, "works")
+    );
+    button.addEventListener("click", () =>
+      stopCarouselScroll(worksScrollTimer)
+    );
   });
 
   [leftReviewsCarouselButton, rightReviewsCarouselButton].forEach((button) => {
-    button.addEventListener("mouseover", stopCarouselScroll);
-    button.addEventListener("mouseout", () =>
-      startCarouselScroll(reviewsCarousel)
+    button.addEventListener("mouseover", () =>
+      stopCarouselScroll(reviewsScrollTimer)
     );
-    button.addEventListener("click", stopCarouselScroll);
+    button.addEventListener("mouseout", () =>
+      startCarouselScroll(reviewsCarousel, "reviews")
+    );
+    button.addEventListener("click", () =>
+      stopCarouselScroll(reviewsScrollTimer)
+    );
   });
 
   // Functions
@@ -177,34 +190,54 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  function setCarouselScrollTimer(carousel) {
-    scrollTimer = setInterval(() => {
-      carousel.scrollLeft += 1;
-      if (
-        carousel.scrollLeft >=
-        carousel.scrollWidth - carousel.clientWidth - 1
-      ) {
-        carousel.classList.add("fade-out");
-        setTimeout(() => {
-          carousel.scrollLeft = 0;
-          carousel.classList.remove("fade-out");
-        }, 250);
-      }
-    }, 20);
+  function setCarouselScrollTimer(carousel, type) {
+    const scrollSpeed = 15; // Adjust scroll speed here (higher value means slower scrolling)
+    if (type === "works") {
+      worksScrollTimer = setInterval(() => {
+        carousel.scrollLeft += 1;
+        if (
+          carousel.scrollLeft >=
+          carousel.scrollWidth - carousel.clientWidth - 1
+        ) {
+          carousel.classList.add("fade-out");
+          setTimeout(() => {
+            carousel.scrollLeft = 0;
+            carousel.classList.remove("fade-out");
+          }, 250);
+        }
+      }, scrollSpeed);
+    } else if (type === "reviews") {
+      reviewsScrollTimer = setInterval(() => {
+        carousel.scrollLeft += 1;
+        if (
+          carousel.scrollLeft >=
+          carousel.scrollWidth - carousel.clientWidth - 1
+        ) {
+          carousel.classList.add("fade-out");
+          setTimeout(() => {
+            carousel.scrollLeft = 0;
+            carousel.classList.remove("fade-out");
+          }, 250);
+        }
+      }, scrollSpeed);
+    }
   }
 
-  function stopCarouselScroll() {
-    clearInterval(scrollTimer);
+  function stopCarouselScroll(timer) {
+    clearInterval(timer);
   }
 
-  function startCarouselScroll(carousel) {
-    setCarouselScrollTimer(carousel);
+  function startCarouselScroll(carousel, type) {
+    setCarouselScrollTimer(carousel, type);
   }
 
   // Fetch and populate carousel
   fetch("/js/projects.json")
     .then((response) => response.json())
-    .then((data) => populateProjectsCarousel(data))
+    .then((data) => {
+      populateProjectsCarousel(data);
+      startCarouselScroll(worksCarousel, "works");
+    })
     .catch((error) => console.error("Error:", error));
 
   function populateProjectsCarousel(data) {
@@ -272,7 +305,10 @@ document.addEventListener("DOMContentLoaded", function () {
   // Fetch and populate carousel with review data from reviews.json
   fetch("/js/reviews.json")
     .then((response) => response.json())
-    .then((data) => populateReviewsCarousel(data))
+    .then((data) => {
+      populateReviewsCarousel(data);
+      startCarouselScroll(reviewsCarousel, "reviews");
+    })
     .catch((error) => console.error("Error loading reviews:", error));
 
   function populateReviewsCarousel(data) {
