@@ -63,11 +63,9 @@ document.addEventListener("DOMContentLoaded", function () {
     option.addEventListener("click", function () {
       // Get the selected language and flag
       const language = option.dataset.value.toUpperCase();
-      const flag = option.querySelector(".flag-icon").className;
 
       // Update the selected language and flag
-      document.getElementById("selected-language").innerHTML =
-        language + " <span class='" + flag + " mr-2'></span>";
+      document.getElementById("selected-language").innerHTML = language;
 
       // Hide the language options and load the translations
       languageOptions.classList.add("hidden");
