@@ -110,39 +110,74 @@ document.addEventListener("DOMContentLoaded", function () {
   loadTranslations("en"); // Default language
 
   // Carousel
-  const leftCarouselButton = document.getElementById("left-carousel-button");
-  const rightCarouselButton = document.getElementById("right-carousel-button");
-  const carousel = document.getElementById("carousel");
-  const buttons = [leftCarouselButton, rightCarouselButton];
+  let scrollTimer;
+  const leftWorksCarouselButton = document.getElementById("left-works-button");
+  const rightWorksCarouselButton =
+    document.getElementById("right-works-button");
+  const leftReviewsCarouselButton = document.getElementById(
+    "left-reviews-button"
+  );
+  const rightReviewsCarouselButton = document.getElementById(
+    "right-reviews-button"
+  );
+  const worksCarousel = document.getElementById("works-carousel");
+  const reviewsCarousel = document.getElementById("reviews-carousel");
 
   // Event Listeners
-  leftCarouselButton.addEventListener("click", scrollCarouselLeft);
-  rightCarouselButton.addEventListener("click", scrollCarouselRight);
-  carousel.addEventListener("mouseover", stopCarouselScroll);
-  carousel.addEventListener("mouseout", startCarouselScroll);
-  buttons.forEach((button) => {
+  leftWorksCarouselButton.addEventListener("click", () =>
+    scrollCarouselLeft(worksCarousel)
+  );
+  rightWorksCarouselButton.addEventListener("click", () =>
+    scrollCarouselRight(worksCarousel)
+  );
+  leftReviewsCarouselButton.addEventListener("click", () =>
+    scrollCarouselLeft(reviewsCarousel)
+  );
+  rightReviewsCarouselButton.addEventListener("click", () =>
+    scrollCarouselRight(reviewsCarousel)
+  );
+
+  worksCarousel.addEventListener("mouseover", stopCarouselScroll);
+  reviewsCarousel.addEventListener("mouseover", stopCarouselScroll);
+  worksCarousel.addEventListener("mouseout", () =>
+    startCarouselScroll(worksCarousel)
+  );
+  reviewsCarousel.addEventListener("mouseout", () =>
+    startCarouselScroll(reviewsCarousel)
+  );
+
+  [leftWorksCarouselButton, rightWorksCarouselButton].forEach((button) => {
     button.addEventListener("mouseover", stopCarouselScroll);
-    button.addEventListener("mouseout", startCarouselScroll);
+    button.addEventListener("mouseout", () =>
+      startCarouselScroll(worksCarousel)
+    );
+    button.addEventListener("click", stopCarouselScroll);
+  });
+
+  [leftReviewsCarouselButton, rightReviewsCarouselButton].forEach((button) => {
+    button.addEventListener("mouseover", stopCarouselScroll);
+    button.addEventListener("mouseout", () =>
+      startCarouselScroll(reviewsCarousel)
+    );
     button.addEventListener("click", stopCarouselScroll);
   });
 
   // Functions
-  function scrollCarouselLeft() {
+  function scrollCarouselLeft(carousel) {
     carousel.scrollTo({
       left: carousel.scrollLeft - carousel.clientWidth,
       behavior: "smooth",
     });
   }
 
-  function scrollCarouselRight() {
+  function scrollCarouselRight(carousel) {
     carousel.scrollTo({
       left: carousel.scrollLeft + carousel.clientWidth,
       behavior: "smooth",
     });
   }
 
-  let scrollTimer;
-  function setCarouselScrollTimer() {
+  function setCarouselScrollTimer(carousel) {
     scrollTimer = setInterval(() => {
       carousel.scrollLeft += 1;
       if (
@@ -157,53 +192,33 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }, 20);
   }
+
   function stopCarouselScroll() {
     clearInterval(scrollTimer);
   }
 
-  function startCarouselScroll() {
-    setCarouselScrollTimer();
-  }
-
-  function setCarouselGradient() {
-    const style = document.createElement("style");
-    style.innerHTML = `
-    .carousel-container::before {
-      position: absolute;
-      width: 20%;
-      background: linear-gradient(to right, rgba(0, 0, 0, 0.7), transparent);
-      z-index: 2;
-      pointer-events: none;
-    }
-    .carousel-container::after {
-      position: absolute;
-      width: 20%;
-      background: linear-gradient(to left, rgba(0, 0, 0, 0.7), transparent);
-      z-index: 2;
-      pointer-events: none;
-    }
-  `;
-    document.head.appendChild(style);
+  function startCarouselScroll(carousel) {
+    setCarouselScrollTimer(carousel);
   }
 
   // Fetch and populate carousel
   fetch("/js/projects.json")
     .then((response) => response.json())
-    .then((data) => populateCarousel(data))
+    .then((data) => populateProjectsCarousel(data))
     .catch((error) => console.error("Error:", error));
 
-  function populateCarousel(data) {
+  function populateProjectsCarousel(data) {
     data.forEach((project) => {
-      const carouselItem = createCarouselItem(project);
-      carousel.appendChild(carouselItem);
+      const carouselItem = createProjectCarouselItem(project);
+      worksCarousel.appendChild(carouselItem);
     });
 
     // Duplicate the first image and append it to the end of the carousel
-    const firstCarouselItem = createCarouselItem(data[0]);
-    carousel.appendChild(firstCarouselItem);
+    const firstCarouselItem = createProjectCarouselItem(data[0]);
+    worksCarousel.appendChild(firstCarouselItem);
   }
 
-  function createCarouselItem(project) {
+  function createProjectCarouselItem(project) {
     const carouselItem = document.createElement("div");
     carouselItem.className = "max-w-xs flex-shrink-0 mr-8 text-center";
 
@@ -214,10 +229,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const imageContainer = document.createElement("div");
     imageContainer.className = "relative w-full h-72 mb-6";
 
-    const hoverImageContainer = createHoverImageContainer(project);
+    const hoverImageContainer = createProjectHoverImageContainer(project);
     imageContainer.appendChild(hoverImageContainer);
 
-    const image = createImage(project);
+    const image = createProjectImage(project);
     imageContainer.appendChild(image);
 
     const projectName = document.createElement("span");
@@ -232,18 +247,18 @@ document.addEventListener("DOMContentLoaded", function () {
     return carouselItem;
   }
 
-  function createHoverImageContainer(project) {
+  function createProjectHoverImageContainer(project) {
     const hoverImageContainer = document.createElement("div");
     hoverImageContainer.className =
       "hidden group-hover:flex items-center justify-center absolute top-0 left-0 w-full h-full bg-gray-800 bg-opacity-80";
 
-    const hoverImage = createImage(project);
+    const hoverImage = createProjectImage(project);
     hoverImageContainer.appendChild(hoverImage);
 
     return hoverImageContainer;
   }
 
-  function createImage(project) {
+  function createProjectImage(project) {
     const image = document.createElement("img");
     image.className = "carousel-image block w-full h-full";
     image.src = project.picture;
@@ -251,5 +266,59 @@ document.addEventListener("DOMContentLoaded", function () {
     image.style.height = "290px";
 
     return image;
+  }
+
+  // Reviews Carousel
+  // Fetch and populate carousel with review data from reviews.json
+  fetch("/js/reviews.json")
+    .then((response) => response.json())
+    .then((data) => populateReviewsCarousel(data))
+    .catch((error) => console.error("Error loading reviews:", error));
+
+  function populateReviewsCarousel(data) {
+    const reviewsCarousel = document.getElementById("reviews-carousel");
+
+    data.forEach((review) => {
+      const carouselItem = createReviewsCarouselItem(review);
+      reviewsCarousel.appendChild(carouselItem);
+    });
+
+    // Duplicate the first review item to loop smoothly
+    const firstReviewItem = createReviewsCarouselItem(data[0]);
+    reviewsCarousel.appendChild(firstReviewItem);
+  }
+
+  function createReviewsCarouselItem(review) {
+    const carouselItem = document.createElement("div");
+    carouselItem.className = "max-w-xs flex-shrink-0 mr-8 text-center";
+
+    const reviewContainer = document.createElement("div");
+    reviewContainer.className = "bg-white p-4 rounded-lg shadow-lg text-center";
+
+    const image = document.createElement("img");
+    image.className = "w-12 h-12 rounded-full mx-auto mb-2";
+    image.src = review.picture;
+
+    const reviewerName = document.createElement("h3");
+    reviewerName.className = "font-semibold";
+    reviewerName.textContent = review.name;
+
+    const rating = document.createElement("div");
+    rating.className = "flex justify-center my-2";
+    rating.innerHTML =
+      "★".repeat(review.rating) + "☆".repeat(5 - review.rating);
+
+    const comment = document.createElement("p");
+    comment.className = "text-gray-600";
+    comment.textContent = review.comment;
+
+    reviewContainer.appendChild(image);
+    reviewContainer.appendChild(reviewerName);
+    reviewContainer.appendChild(rating);
+    reviewContainer.appendChild(comment);
+
+    carouselItem.appendChild(reviewContainer);
+
+    return carouselItem;
   }
 });

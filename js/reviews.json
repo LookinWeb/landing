@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Reviewer 1",
+    "picture": "https://picsum.photos/150",
+    "rating": 4,
+    "comment": "Lorem ipsum dolor sit amet consectetur. Morbi eu et nullam fusce sed netus id."
+  },
+  {
+    "name": "Reviewer 2",
+    "picture": "https://picsum.photos/150",
+    "rating": 3,
+    "comment": "Curabitur tincidunt facilisis libero, in bibendum neque volutpat vel."
+  },
+  {
+    "name": "Reviewer 3",
+    "picture": "https://picsum.photos/150",
+    "rating": 5,
+    "comment": "Etiam consectetur quam ac fermentum pretium. Nulla facilisi."
+  },
+  {
+    "name": "Reviewer 4",
+    "picture": "https://picsum.photos/150",
+    "rating": 2,
+    "comment": "Sed consequat eros nec sapien tristique, nec sodales tortor volutpat."
+  },
+  {
+    "name": "Reviewer 5",
+    "picture": "https://picsum.photos/150",
+    "rating": 4,
+    "comment": "Proin at libero id magna aliquet facilisis et vitae sapien."
+  }
+]
