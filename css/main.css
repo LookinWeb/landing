@@ -51,15 +51,15 @@ body {
   );
 }
 
-#carousel::-webkit-scrollbar {
+#works-carousel::-webkit-scrollbar,
+#reviews-carousel::-webkit-scrollbar {
   display: none;
 }
 
-#carousel {
-  -ms-overflow-style: none;
-  /* IE and Edge */
-  scrollbar-width: none;
-  /* Firefox */
+#works-carousel,
+#reviews-carousel {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
   position: relative;
   padding: 0 50px;
 }
