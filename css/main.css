@@ -28,6 +28,10 @@ body {
   background-blend-mode: darken;
 }
 
+.review-bg {
+  background: linear-gradient(0deg, #dbf2f2, #dbf2f2);
+}
+
 .button-gradient {
   background: linear-gradient(
     156deg,

@@ -329,7 +329,8 @@ document.addEventListener("DOMContentLoaded", function () {
     carouselItem.className = "max-w-xs flex-shrink-0 mr-8 text-center";
 
     const reviewContainer = document.createElement("div");
-    reviewContainer.className = "bg-white p-4 rounded-lg shadow-lg text-center";
+    reviewContainer.className =
+      "review-bg p-4 rounded-lg shadow-lg text-center";
 
     const image = document.createElement("img");
     image.className = "w-12 h-12 rounded-full mx-auto mb-2";
