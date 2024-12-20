@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
     language = language.toLowerCase();
     document.documentElement.lang = language;
 
-    fetch(`resources/translations/${language}.json`)
+    fetch(`/translations/${language}.json`)
       .then((response) => response.json())
       .then((data) => {
         const translations = data;
