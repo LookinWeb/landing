@@ -1,1 +1,36 @@
-{}
+{
+  "navbar_open_menu": "Open main menu",
+  "navbar_about": "About",
+  "navbar_benefits": "Benefits",
+  "navbar_our_works": "Our works",
+  "navbar_our_reviews": "Our reviews",
+  "navbar_contact_us": "Contact us",
+
+  "section_about_us": "About Us",
+  "section_about_us_description": "LookinWeb is a leading software development company that specializes in creating innovative solutions for businesses of all sizes. We offer a wide range of services, including web development and custom software development. Our team of experienced professionals is dedicated to delivering high-quality solutions that meet the unique needs of our clients.",
+  "button_contact_us": "Contact Us",
+
+  "section_benefits": "Benefits",
+  "section_benefits_performance": "Performance",
+  "section_benefits_performance_description": "Achieve high performance with our solutions",
+
+  "section_benefits_expertise": "Expertise",
+  "section_benefits_expertise_description": "Benefit from our extensive expertise",
+
+  "section_benefits_security": "Security",
+  "section_benefits_security_description": "Ensure top-notch security for your data",
+
+  "section_benefits_cost_efficiency": "Cost-Efficiency",
+  "section_benefits_cost_efficiency_description": "Optimize costs without compromising quality",
+
+  "section_benefits_innovation": "Innovation",
+  "section_benefits_innovation_description": "Drive innovation with cutting-edge solutions",
+
+  "section_our_works": "Our Works",
+
+  "section_our_reviews": "Our Reviews",
+
+  "section_our_partners": "Our Partners",
+
+  "section_contact_us": "Contact Us"
+}
