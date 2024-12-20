@@ -231,14 +231,27 @@ document.addEventListener("DOMContentLoaded", function () {
     setCarouselScrollTimer(carousel, type);
   }
 
-  // Fetch and populate carousel
-  fetch("/js/projects.json")
-    .then((response) => response.json())
-    .then((data) => {
-      populateProjectsCarousel(data);
-      startCarouselScroll(worksCarousel, "works");
-    })
-    .catch((error) => console.error("Error:", error));
+  // Projects Carousel
+  const projectsData = [
+    {
+      name: "U-SWITCH",
+      url: "https://www.uswitch.ee",
+      picture: "./img/projects/uswitch.webp",
+    },
+    {
+      name: "LookinLabs Website",
+      url: "https://lookinlabs.com",
+      picture: "./img/projects/lookinlabs.webp",
+    },
+    {
+      name: "Software Engineer Portfolio Website",
+      url: "https://martinsidorov.com",
+      picture: "./img/projects/martin_sidorov.webp",
+    },
+  ];
+
+  populateProjectsCarousel(projectsData);
+  startCarouselScroll(worksCarousel, "works");
 
   function populateProjectsCarousel(data) {
     data.forEach((project) => {
@@ -302,14 +315,29 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Reviews Carousel
-  // Fetch and populate carousel with review data from reviews.json
-  fetch("/js/reviews.json")
-    .then((response) => response.json())
-    .then((data) => {
-      populateReviewsCarousel(data);
-      startCarouselScroll(reviewsCarousel, "reviews");
-    })
-    .catch((error) => console.error("Error loading reviews:", error));
+  const reviewsData = [
+    {
+      name: "Daniel Laks",
+      picture: "https://picsum.photos/150",
+      rating: 5,
+      comment: "Great service, I would recommend it to anyone.",
+    },
+    {
+      name: "Martin Sidorov",
+      picture: "https://picsum.photos/150",
+      rating: 5,
+      comment: "Love the commitment to the customer.",
+    },
+    {
+      name: "U-Switch",
+      picture: "https://picsum.photos/150",
+      rating: 5,
+      comment: "Liked the service, would use it again.",
+    },
+  ];
+
+  populateReviewsCarousel(reviewsData);
+  startCarouselScroll(reviewsCarousel, "reviews");
 
   function populateReviewsCarousel(data) {
     const reviewsCarousel = document.getElementById("reviews-carousel");
