@@ -1,0 +1,132 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Apply color to all text */
+body {
+  color: #0a0c34;
+}
+
+/* LookinWeb */
+.lookinweb-body-bg {
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(
+    335.98deg,
+    rgba(198, 204, 236, 0.87) 8.5%,
+    #a7cdc4 53.5%,
+    #d8eee0 96.5%
+  );
+  background-blend-mode: screen;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.lookinweb-navbar,
+#language-options {
+  background: linear-gradient(0deg, #a6dddd 26%, #769494 100%);
+  background-blend-mode: darken;
+}
+
+.lookinweb-footer {
+  background: linear-gradient(0deg, #a6dddd, #a6dddd);
+  background-blend-mode: darken;
+}
+
+.review-bg {
+  background: linear-gradient(0deg, #dbf2f2, #dbf2f2);
+}
+
+.button-gradient {
+  background: linear-gradient(
+    156deg,
+    #02181d 13.54%,
+    #000312 36.46%,
+    rgba(23, 1, 37, 1) 68.23%
+  );
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  border: 2px solid white;
+  transition: background 0.3s ease-in-out;
+}
+
+.button-gradient:hover {
+  background: linear-gradient(
+    156deg,
+    #02181d 33.54%,
+    #000312 56.46%,
+    rgba(23, 1, 37, 1) 88.23%
+  );
+}
+
+#works-carousel::-webkit-scrollbar,
+#reviews-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+#works-carousel,
+#reviews-carousel {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  position: relative;
+  padding: 0 50px;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 10%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.carousel-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 10%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Animation */
+.carousel-image {
+  transition: transform 0.3s ease;
+}
+
+.carousel-image:hover {
+  transform: scale(1.08);
+}
+
+/* Styles for small screens (phones) */
+@media (max-width: 767px) {
+  #navbar-default {
+    position: relative;
+  }
+  #language-changer {
+    position: fixed;
+    right: 65px;
+    top: 8px;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}

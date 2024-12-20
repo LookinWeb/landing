@@ -1,0 +1,36 @@
+{
+  "navbar_open_menu": "Avada peamenüü",
+  "navbar_about": "Meist",
+  "navbar_benefits": "Eelised",
+  "navbar_our_works": "Meie tööd",
+  "navbar_our_reviews": "Meie ülevaated",
+  "navbar_contact_us": "Võta meiega ühendust",
+
+  "section_about_us": "Meist",
+  "section_about_us_description": "LookinWeb on juhtiv tarkvaraarendusettevõte, mis on spetsialiseerunud uuenduslike lahenduste loomisele igas suuruses ettevõtetele. Pakume laia valikut teenuseid, sealhulgas veebiarendust ja kohandatud tarkvaraarendust. Meie kogenud professionaalide meeskond on pühendunud kvaliteetsete lahenduste pakkumisele, mis vastavad meie klientide ainulaadsetele vajadustele.",
+  "button_contact_us": "Võta meiega ühendust",
+
+  "section_benefits": "Eelised",
+  "section_benefits_performance": "Jõudlus",
+  "section_benefits_performance_description": "Saavuta kõrge jõudlus meie lahendustega",
+
+  "section_benefits_expertise": "Asjatundlikkus",
+  "section_benefits_expertise_description": "Kasuta meie ulatuslikku asjatundlikkust",
+
+  "section_benefits_security": "Turvalisus",
+  "section_benefits_security_description": "Tagage oma andmete tipptasemel turvalisus",
+
+  "section_benefits_cost_efficiency": "Kuluefektiivsus",
+  "section_benefits_cost_efficiency_description": "Optimeeri kulusid kvaliteeti ohverdamata",
+
+  "section_benefits_innovation": "Innovatsioon",
+  "section_benefits_innovation_description": "Juhi innovatsiooni tipptasemel lahendustega",
+
+  "section_our_works": "Meie tööd",
+
+  "section_our_reviews": "Meie ülevaated",
+
+  "section_our_partners": "Meie partnerid",
+
+  "section_contact_us": "Võta meiega ühendust"
+}
