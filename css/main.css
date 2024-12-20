@@ -18,7 +18,8 @@ body {
   background-attachment: fixed;
 }
 
-.lookinweb-navbar {
+.lookinweb-navbar,
+#language-options {
   background: linear-gradient(0deg, #a6dddd 26%, #769494 100%);
   background-blend-mode: darken;
 }
