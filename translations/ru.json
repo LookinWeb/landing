@@ -1,36 +1,36 @@
 {
-  "navbar_open_menu": "Open main menu",
-  "navbar_about": "About",
-  "navbar_benefits": "Benefits",
-  "navbar_our_works": "Our works",
-  "navbar_our_reviews": "Our reviews",
-  "navbar_contact_us": "Contact us",
+  "navbar_open_menu": "Открыть главное меню",
+  "navbar_about": "О нас",
+  "navbar_benefits": "Преимущества",
+  "navbar_our_works": "Наши работы",
+  "navbar_our_reviews": "Наши отзывы",
+  "navbar_contact_us": "Свяжитесь с нами",
 
-  "section_about_us": "About Us",
-  "section_about_us_description": "LookinWeb is a leading software development company that specializes in creating innovative solutions for businesses of all sizes. We offer a wide range of services, including web development and custom software development. Our team of experienced professionals is dedicated to delivering high-quality solutions that meet the unique needs of our clients.",
-  "button_contact_us": "Contact Us",
+  "section_about_us": "О нас",
+  "section_about_us_description": "LookinWeb - ведущая компания по разработке программного обеспечения, специализирующаяся на создании инновационных решений для бизнеса любого размера. Мы предлагаем широкий спектр услуг, включая веб-разработку и разработку индивидуального программного обеспечения. Наша команда опытных профессионалов стремится предоставлять высококачественные решения, которые соответствуют уникальным потребностям наших клиентов.",
+  "button_contact_us": "Свяжитесь с нами",
 
-  "section_benefits": "Benefits",
-  "section_benefits_performance": "Performance",
-  "section_benefits_performance_description": "Achieve high performance with our solutions",
+  "section_benefits": "Преимущества",
+  "section_benefits_performance": "Производительность",
+  "section_benefits_performance_description": "Достигайте высокой производительности с нашими решениями",
 
-  "section_benefits_expertise": "Expertise",
-  "section_benefits_expertise_description": "Benefit from our extensive expertise",
+  "section_benefits_expertise": "Экспертиза",
+  "section_benefits_expertise_description": "Воспользуйтесь нашим обширным опытом",
 
-  "section_benefits_security": "Security",
-  "section_benefits_security_description": "Ensure top-notch security for your data",
+  "section_benefits_security": "Безопасность",
+  "section_benefits_security_description": "Обеспечьте высочайший уровень безопасности ваших данных",
 
-  "section_benefits_cost_efficiency": "Cost-Efficiency",
-  "section_benefits_cost_efficiency_description": "Optimize costs without compromising quality",
+  "section_benefits_cost_efficiency": "Экономичность",
+  "section_benefits_cost_efficiency_description": "Оптимизируйте затраты без ущерба для качества",
 
-  "section_benefits_innovation": "Innovation",
-  "section_benefits_innovation_description": "Drive innovation with cutting-edge solutions",
+  "section_benefits_innovation": "Инновации",
+  "section_benefits_innovation_description": "Продвигайте инновации с передовыми решениями",
 
-  "section_our_works": "Our Works",
+  "section_our_works": "Наши работы",
 
-  "section_our_reviews": "Our Reviews",
+  "section_our_reviews": "Наши отзывы",
 
-  "section_our_partners": "Our Partners",
+  "section_our_partners": "Наши партнеры",
 
-  "section_contact_us": "Contact Us"
+  "section_contact_us": "Свяжитесь с нами"
 }

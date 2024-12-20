@@ -1,36 +1,36 @@
 {
-  "navbar_open_menu": "Open main menu",
-  "navbar_about": "About",
-  "navbar_benefits": "Benefits",
-  "navbar_our_works": "Our works",
-  "navbar_our_reviews": "Our reviews",
-  "navbar_contact_us": "Contact us",
+  "navbar_open_menu": "Avada peamenüü",
+  "navbar_about": "Meist",
+  "navbar_benefits": "Eelised",
+  "navbar_our_works": "Meie tööd",
+  "navbar_our_reviews": "Meie ülevaated",
+  "navbar_contact_us": "Võta meiega ühendust",
 
-  "section_about_us": "About Us",
-  "section_about_us_description": "LookinWeb is a leading software development company that specializes in creating innovative solutions for businesses of all sizes. We offer a wide range of services, including web development and custom software development. Our team of experienced professionals is dedicated to delivering high-quality solutions that meet the unique needs of our clients.",
-  "button_contact_us": "Contact Us",
+  "section_about_us": "Meist",
+  "section_about_us_description": "LookinWeb on juhtiv tarkvaraarendusettevõte, mis on spetsialiseerunud uuenduslike lahenduste loomisele igas suuruses ettevõtetele. Pakume laia valikut teenuseid, sealhulgas veebiarendust ja kohandatud tarkvaraarendust. Meie kogenud professionaalide meeskond on pühendunud kvaliteetsete lahenduste pakkumisele, mis vastavad meie klientide ainulaadsetele vajadustele.",
+  "button_contact_us": "Võta meiega ühendust",
 
-  "section_benefits": "Benefits",
-  "section_benefits_performance": "Performance",
-  "section_benefits_performance_description": "Achieve high performance with our solutions",
+  "section_benefits": "Eelised",
+  "section_benefits_performance": "Jõudlus",
+  "section_benefits_performance_description": "Saavuta kõrge jõudlus meie lahendustega",
 
-  "section_benefits_expertise": "Expertise",
-  "section_benefits_expertise_description": "Benefit from our extensive expertise",
+  "section_benefits_expertise": "Asjatundlikkus",
+  "section_benefits_expertise_description": "Kasuta meie ulatuslikku asjatundlikkust",
 
-  "section_benefits_security": "Security",
-  "section_benefits_security_description": "Ensure top-notch security for your data",
+  "section_benefits_security": "Turvalisus",
+  "section_benefits_security_description": "Tagage oma andmete tipptasemel turvalisus",
 
-  "section_benefits_cost_efficiency": "Cost-Efficiency",
-  "section_benefits_cost_efficiency_description": "Optimize costs without compromising quality",
+  "section_benefits_cost_efficiency": "Kuluefektiivsus",
+  "section_benefits_cost_efficiency_description": "Optimeeri kulusid kvaliteeti ohverdamata",
 
-  "section_benefits_innovation": "Innovation",
-  "section_benefits_innovation_description": "Drive innovation with cutting-edge solutions",
+  "section_benefits_innovation": "Innovatsioon",
+  "section_benefits_innovation_description": "Juhi innovatsiooni tipptasemel lahendustega",
 
-  "section_our_works": "Our Works",
+  "section_our_works": "Meie tööd",
 
-  "section_our_reviews": "Our Reviews",
+  "section_our_reviews": "Meie ülevaated",
 
-  "section_our_partners": "Our Partners",
+  "section_our_partners": "Meie partnerid",
 
-  "section_contact_us": "Contact Us"
+  "section_contact_us": "Võta meiega ühendust"
 }
