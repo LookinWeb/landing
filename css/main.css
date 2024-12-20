@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 /* Apply color to all text */
 body {
   color: #0a0c34;
